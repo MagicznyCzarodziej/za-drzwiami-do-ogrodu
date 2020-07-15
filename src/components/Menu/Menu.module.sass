@@ -1,0 +1,82 @@
+@import './../variables'
+  
+.menu
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 2rem
+
+.logo
+  display: flex
+
+.logoText
+  color: $c-white
+  font-family: 'Zilla Slab', sans-serif
+  font-size: 1.3rem
+  font-weight: bold
+  margin-left: 1rem
+  text-transform: uppercase
+
+.hamburger
+  width: 2rem
+  height: 2rem
+  fill: $c-white
+  @media (min-width: $br-l)
+    display: none
+
+.menuOpen
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 1
+  background-color: rgba(0, 0, 0, 0.95);
+  color: $c-white
+  @media (min-width: $br-l)
+    display: none
+
+.closeButton
+  text-align: right
+  position: relative
+  font-size: $fz-xl
+  right: 2rem
+  top: 2rem
+
+.menuItems
+  display: none
+
+  @media (min-width: $br-l)
+    display: flex
+    a
+      display: block
+      margin: 0 2rem
+      text-decoration: none
+      color: $c-white
+      font-family: 'Zilla Slab', sans-serif
+      font-size: $fz-l
+      &:hover
+        background-color: $c-white
+        color: $c-black
+
+.menuOpenItems
+  margin-top: 2rem
+  text-align: center
+  font-size: $fz-l
+  a
+    display: block
+    color: $c-white
+    text-decoration: none
+    padding: 1.5rem 1rem
+  
+.social a
+  display: inline-block
+  @media (min-width: $br-l)
+    margin: 0 0.5rem
+    svg
+      position: relative
+      top: 3px
+    &:hover
+      background-color: initial
+      color: $c-white

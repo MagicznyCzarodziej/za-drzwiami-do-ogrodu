@@ -1,0 +1,44 @@
+@import './../variables'
+  
+.button
+  padding: 0.7em 1em
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold
+  font-size: $fz-m
+  background-color: transparent
+  border: none
+  cursor: pointer
+  transition: background-color 0.1s
+  outline-offset: -2px
+  &:focus, &:hover
+    outline: none
+    background-color: $c-white
+    color: $c-black
+  svg
+    display: none
+    margin-left: 1rem
+    position: relative
+    top: 3px
+    @media (min-width: $br-m)
+      display: unset
+
+.mobileOnly
+  @media (min-width: $br-m)
+    display: none
+
+.white
+  outline: 2px solid $c-white
+  color: $c-white;
+
+.black
+  background-color: $c-black
+  color: $c-white
+  &:focus, &:hover
+    outline: 2px solid $c-black
+
+.blue
+  background-color: $c-blue
+  color: $c-white
+  &:focus, &:hover
+    outline: 2px solid $c-blue
+    color: $c-blue
