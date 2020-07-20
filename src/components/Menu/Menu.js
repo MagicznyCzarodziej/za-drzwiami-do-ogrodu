@@ -20,10 +20,10 @@ export default function Menu(props) {
       <a href="#callus">Umów sesję</a>
       <a href="#map">Lokalizacja</a>
       <div className={styles.social}>
-        <a href="#fb">
+        <a href="#fb" aria-label="facebook">
           <FaFacebookSquare />
         </a>
-        <a href="#insta">
+        <a href="#insta" aria-label="instagram">
           <FaInstagramSquare />
         </a>
       </div>
