@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import cx from 'classnames';
 
 import { SRLWrapper } from 'simple-react-lightbox';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import Button from './../Button/Button';
 
 import styles from './Gallery.module.sass';
@@ -31,16 +33,16 @@ export default function Gallery() {
     <section className={styles.gallery}>
       <p>(Kliknij na zdjęcie, aby powiększyć)</p>
       <SRLWrapper options={slrOptions}>
-        <img src={img1} alt=""/>
-        <img src={img2} alt=""/>
-        <img src={img3} alt=""/>
+        <LazyLoadImage src={img1} alt="" />
+        <LazyLoadImage src={img2} alt="" />
+        <LazyLoadImage src={img3} alt="" />
         <div className={cx(styles.subGallery, showMore ? '' : styles.hidden)}>
-          <img src={img5} alt=""/> 
-          <img src={img2} alt=""/>
-          <img src={img3} alt=""/>
-          <img src={img4} alt=""/>
-          <img src={img6} alt=""/>
-          <img src={img1} alt=""/>
+          <LazyLoadImage src={img5} alt="" />
+          <LazyLoadImage src={img2} alt="" />
+          <LazyLoadImage src={img3} alt="" />
+          <LazyLoadImage src={img4} alt="" />
+          <LazyLoadImage src={img6} alt="" />
+          <LazyLoadImage src={img1} alt="" />
         </div>
       </SRLWrapper>
       
